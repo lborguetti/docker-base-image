@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := tag
+.DEFAULT_GOAL := branch
 
 GITHUB_URL="github.com/lborguetti/docker-base-image.git"
 
@@ -12,12 +12,12 @@ github-setup:
 
 .PHONY: update
 update:
-	@git checkout -b origin-travis
+	@git checkout -b $(VERSION)
 	@echo Create Dockerfile : version $(VERSION)
 	@sed "s@__version__@$(VERSION)@g" Dockerfile.template > Dockerfile
 	@git add . Dockerfile
 	@git commit --message "Travis build: $(TRAVIS_BUILD_NUMBER)"
 
-.PHONY: tag
+.PHONY: branch
 tag: github-setup update
 	@git push --quiet --set-upstream origin-travis $(VERSION)
