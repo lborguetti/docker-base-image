@@ -16,7 +16,7 @@ update:
 	@echo Create Dockerfile : version $(VERSION)
 	@sed "s@__version__@$(VERSION)@g" Dockerfile.template > Dockerfile
 	@git add . Dockerfile
-	@git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+	@git commit --message "Travis build: $(TRAVIS_BUILD_NUMBER)"
 
 .PHONY: tag
 tag: github-setup update
