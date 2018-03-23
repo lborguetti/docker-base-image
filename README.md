@@ -3,9 +3,9 @@ docker-base-image
 
 [![Build Status](https://travis-ci.org/lborguetti/docker-base-image.svg?branch=master)](https://travis-ci.org/lborguetti/docker-base-image)
 
-This project build automatically a docker image **FROM** `debian:stable-slim` image.
+This project build automatically a docker image **FROM** `debian:stable-slim`
 
-> note: I use this docker image in my all dockerfiles.
+> note: I use this docker image in my all Dockerfiles.
 
 ## Why use one docker-base-image?
 
@@ -23,7 +23,7 @@ This project will've build this image weekly and publish with a tag `stable`
 
 You can find all releases here: https://hub.docker.com/r/lborguetti/docker-base-image/tags/
 
-In your Dockefile in the `FROM` instruction use `lborguett:docker-base-image:stable`
+The **FROM** instruction specifies the Base Image from which you are building, use this image there.
 
 > example:
 
@@ -39,7 +39,7 @@ EOF
 
 ## Build flow
 
-Travis CI and Docker Hub can to build this image weekly without user interaction.
+Travis CI and Docker Hub can build this image weekly without user interaction.
 
 Travis-CI is setted to trigger weekly a build from master branch. This build will create a branch with the name "year.month.day" and will push back to github.
 
