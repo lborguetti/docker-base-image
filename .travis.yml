@@ -1,0 +1,8 @@
+lang: generic
+
+script:
+  - make
+
+env:
+  global:
+    secure:
