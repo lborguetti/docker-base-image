@@ -19,5 +19,5 @@ update:
 	@git commit --message "Travis build: $(TRAVIS_BUILD_NUMBER)"
 
 .PHONY: branch
-tag: github-setup update
+branch: github-setup update
 	@git push --quiet --set-upstream origin-travis $(VERSION)
