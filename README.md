@@ -5,8 +5,6 @@ docker-base-image
 
 This project build automatically a docker image **FROM** `debian:stable-slim`
 
-> note: I use this docker image in my all Dockerfiles.
-
 ## Why use one docker-base-image?
 
 - It reduces the time needed to run docker build, allowing you to iterate your Dockerfile more quickly.
@@ -15,7 +13,11 @@ This project build automatically a docker image **FROM** `debian:stable-slim`
 
 ## What's inside the image?
 
-Take a look at Dockefile.template ;)
+```shell
+ca-certificates
+curl
+ngrep
+```
 
 ## How use this docker-base-image?
 
